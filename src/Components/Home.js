@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  CDBBtn,
   CDBProgress,
-  CDBContainer,
   CDBLink } from "cdbreact";
 // import { Pie, Bar } from "react-chartjs-2";
 import Sidebar from "../Common/SideBar";
