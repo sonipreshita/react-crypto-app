@@ -17,19 +17,25 @@ function CoinList() {
        setCoins(res.data)
     }).catch(error=>console.log(error))
   }, [])
-  const handleChange = e =>{
-    setSearch(e.target.value)
-  }
   const filteredCoins = coins.filter(coin=>
     coin.name.toLowerCase().includes(search.toLowerCase())
     )
-  console.log('here',filteredCoins)
+    const handleChange = e =>{
+      setSearch(e.target.value)
+    }
   return (
 <div className="d-flex">
       <div>
         <Sidebar/>
       </div>
       <div style={{flex:"1 1 auto", display:"flex", flexFlow:"column", height:"100vh", overflowY:"hidden"}}>
+      <div className="coin-search">
+        {/* <h1 className="coin-text">Search your desired coin</h1> */}
+        <form action="">
+          <input type="text" className="coin-input" placeholder="Search With Coin Name" onChange={handleChange}/>
+        </form>
+      </div>
+       
         <div style={{height:"100%"}}>
           <div style={{padding:"20px 5%",height:"calc(100% - 64px)",overflowY:"scroll"}}>
             <div style={{display:"grid", gridTemplateColumns:"repeat(1, minmax(200px, 700px))"}}></div>
@@ -40,8 +46,8 @@ function CoinList() {
     <tr>
       <th>Icons</th>
       <th>Name</th>
-      <th>Price</th>
-      <th>Mkt Cap</th>
+      <th>Price(USD)</th>
+      <th>Mkt Cap(USD)</th>
       <th>Price Change</th>
     </tr>
   </CDBTableHeader>

@@ -162,6 +162,15 @@ td .greencolor {
     color: #11d811;
 }
 
+.headerClass{
+    background: #374c63;
+    color: rgb(255, 255, 255);
+}
+
+.ml-auto{
+    margin-left : auto !important;
+}
+
 .dashboard .card-bg {
 	border:1px solid #f2f2f2;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

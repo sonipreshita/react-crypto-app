@@ -24,7 +24,7 @@ export const Exchanges = () => {
 					<div style={{height:"calc(100% - 64px)", padding:"20px 5%", overflowY:"scroll"}}>
 						<div style={{margin:"0 auto", maxWidth:"1320px"}}>
                             {filteredCoins.map(data=>{
-                            if(data.description!== "")return(<div className="card shadow border-0">
+                            if(data.description!== ""){return(<div className="card shadow border-0">
 				            <div className="p-3">
 				              <h4 className="mt-3">{data.name}</h4>
 				              <p>{data.description}</p>
@@ -35,7 +35,7 @@ export const Exchanges = () => {
 				                {data.country}
 				              </CDBBtn>
 				            </div>
-				          </div>)})}
+				          </div>)}else{return null;}})}
 								</div>
 							</div>
 			        <footer className="d-flex mx-auto py-4">
