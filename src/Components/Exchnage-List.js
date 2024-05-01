@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CDBBtn } from "cdbreact";
 import Sidebar from "../Common/SideBar";
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 export const Exchanges = () => {
     const [data,setdata] = useState([])
@@ -31,9 +32,9 @@ export const Exchanges = () => {
 				            </div>
 				           
 				            <div className="p-3">
-				              <CDBBtn color="dark" flat outline circle>
-				                {data.country}
-				              </CDBBtn>
+				              {/* <CDBBtn color="dark" flat outline circle> */}
+				               <Link to={data.url} target="_blank">{data.country}</Link>
+				              {/* </CDBBtn> */}
 				            </div>
 				          </div>)}else{return null;}})}
 								</div>
