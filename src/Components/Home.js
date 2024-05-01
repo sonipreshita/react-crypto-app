@@ -6,7 +6,7 @@ import {
   CDBLink } from "cdbreact";
 // import { Pie, Bar } from "react-chartjs-2";
 import Sidebar from "../Common/SideBar";
-import Navbar from "../Navbar";
+import Navbar from "../Common/Navbar";
 
 export default function App() {
 
